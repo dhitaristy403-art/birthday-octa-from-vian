@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #050005;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at 50% 30%, #ff149380, transparent 30%),
+        radial-gradient(circle at 20% 80%, #ff007750, transparent 30%),
+        radial-gradient(circle at 80% 70%, #ff149350, transparent 30%);
+
+    z-index: -2;
+}
+
+
+/* =========================
+   HATI BACKGROUND
+========================= */
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    bottom: -50px;
+
+    color: #ff3c9d;
+
+    font-size: 25px;
+
+    animation:
+        floatUp linear forwards;
+
+    text-shadow:
+        0 0 5px #ff1493,
+        0 0 15px #ff1493,
+        0 0 30px #ff1493;
+}
+
+@keyframes floatUp {
+
+    0% {
+        transform:
+            translateY(0)
+            scale(0.5)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            scale(1.4)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   OPENING
+========================= */
+
+.opening {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+.opening-box {
+
+    width: 90%;
+    max-width: 600px;
+
+    padding: 45px 25px;
+
+    border-radius: 30px;
+
+    background: rgba(20, 0, 20, 0.75);
+
+    border: 1px solid #ff3c9d;
+
+    box-shadow:
+        0 0 20px #ff1493,
+        0 0 60px #ff149355;
+
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+.small-text {
+    color: #ff8bc7;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.opening h1 {
+    font-size: 50px;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 10px #ff1493,
+        0 0 30px #ff1493;
+}
+
+.opening p {
+    line-height: 1.8;
+    margin: 20px 0;
+    color: #ffd9ee;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    background: #ff1493;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px #ff1493,
+        0 0 30px #ff149380;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 20px #ff1493,
+        0 0 50px #ff1493;
+
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding:
+        60px
+        20px
+        100px;
+
+    text-align: center;
+}
+
+.top-text {
+
+    color: #ff75bb;
+
+    letter-spacing: 5px;
+
+    font-size: 14px;
+}
+
+.name {
+
+    margin-top: 15px;
+
+    font-size: 45px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px #ff1493,
+        0 0 30px #ff1493,
+        0 0 60px #ff1493;
+}
+
+.date {
+
+    margin-top: 10px;
+
+    color: #ffaad4;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================
+   BIG HEART
+========================= */
+
+.big-heart {
+
+    margin: 50px auto;
+
+    font-size: 150px;
+
+    color: #ff1493;
+
+    width: 180px;
+
+    animation:
+        heartbeat 1.2s infinite;
+
+    filter:
+        drop-shadow(0 0 10px #ff1493)
+        drop-shadow(0 0 30px #ff1493)
+        drop-shadow(0 0 60px #ff1493);
+}
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message-box {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    min-height: 150px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 20, 147, 0.08);
+
+    border:
+        1px solid rgba(255, 105, 180, 0.5);
+
+    box-shadow:
+        0 0 30px rgba(255, 20, 147, 0.15);
+}
+
+#typing {
+
+    line-height: 2;
+
+    color: #ffe7f4;
+
+    font-size: 17px;
+}
+
+.love-button {
+
+    margin-top: 30px;
+}
+
+.secret {
+
+    display: none;
+
+    margin-top: 25px;
+
+    color: #ff91c7;
+
+    font-size: 18px;
+
+    animation: appear 1s ease;
+}
+
+
+/* =========================
+   HP
+========================= */
+
+@media (max-width: 600px) {
+
+    .opening h1 {
+        font-size: 38px;
+    }
+
+    .name {
+        font-size: 34px;
+    }
+
+    .big-heart {
+        font-size: 110px;
+    }
+
+    #typing {
+        font-size: 15px;
+    }
+
+}
