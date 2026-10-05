@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday 💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<audio id="music">
+        <source src="LAGU.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Background hati -->
+    <div class="hearts"></div>
+    <!-- Background hati -->
+    <div class="hearts"></div>
+
+    <!-- Halaman awal -->
+    <section class="opening" id="opening">
+        <div class="opening-box">
+            <p class="small-text">ADA SESUATU UNTUKMU 💌</p>
+
+            <h1>15 OKTOBER</h1>
+
+            <p>
+                Hari ini bukan hari biasa...
+                <br>
+                karena seseorang sedang bertambah usia 🎂
+            </p>
+
+            <button onclick="startSurprise()">
+                BUKA SURPRISE 💗
+            </button>
+        </div>
+    </section>
+
+
+    <!-- Isi surprise -->
+    <section class="birthday" id="birthday">
+
+        <p class="top-text">HAPPY BIRTHDAY 🎂</p>
+
+        <h1 class="name">
+            OCTAVIA ANAFUNISA
+        </h1>
+
+        <p class="date">
+            15 OKTOBER
+        </p>
+
+        <!-- Hati besar -->
+        <div class="big-heart">
+            ❤
+        </div>
+
+        <div class="message-box">
+
+            <p id="typing"></p>
+
+        </div>
+
+        <button class="love-button" onclick="showMessage()">
+            KLIK DI SINI 💌
+        </button>
+
+        <p id="secret" class="secret">
+            Semoga semua hal baik datang kepadamu. 💗
+        </p>
+
+    </section>
+
+
+    <!-- Musik -->
+    <audio id="music" loop>
+        <source src="musik.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
